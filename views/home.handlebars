@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+
+    <title>Document</title>
+</head>
+<br> <br> <br>
+
+<form>
+    <label id="info"> Workout information</label>
+    <input type="text" id="name" name="name" placeholder="Client Name" required="required">
+    <input type="text" id="reps" name="reps" placeholder="enter number of reps" required="required">
+    <input type="text" id="weight" name="weight" placeholder="enter weights" required="required">
+    <input type="text" id="date" name="date" placeholder="Date (yyyy-mm-dd)" required="required">
+    <input type="text" id="lbs" name="lbs" placeholder="lbs? yes or no" required="required">
+    <button id="get-btn">Submit</button>
+</form>
+
+<br>  <br>  
+
+
+<body>
+    <h2> Exercise Results</h2>
+    <table class="table">
+        <thead>
+            <th class="ve ho">Name</th>
+            <th class="ve ho">Reps</th>
+            <th class="ve ho">Weight</th>
+            <th class="ve ho">Date</th>
+            <th class="ve ho">Unit</th>
+            <th class="ve ho">Delete</th>
+            <th class="ve ho">Edit</th>
+        </thead>
+
+        <tbody>
+            {{#each results}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.reps}}</td>
+                <td>{{this.weight}}</td>
+                <td>{{this.date}}</td>
+                <td>{{this.lbs}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <script src="../../index.js"></script>
+</body>
+</html>
